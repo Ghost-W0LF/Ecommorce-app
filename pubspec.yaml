@@ -1,0 +1,42 @@
+name: ecomorce
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_native_splash: ^2.4.0
+  smooth_page_indicator: ^1.2.0+3
+  get: ^4.6.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/onBoarding/Dark_onboarding.gif
+    - assets/images/onBoarding/Light_onboarding.gif
+    - assets/images/onBoarding/onboarding 2.gif
+    - assets/images/onBoarding/onboarding 3.gif
+    - assets/images/logo/logo.png
+    - assets/images/logo/Google.png
+    - assets/images/logo/Facebook.png
+
+flutter_native_splash:
+  color: "#42a5f5"
+  image: assets/Light.jpeg
+  image_dark: assets/Dark.jpeg 
+  android_12:
+    color: "#42a5f5"
+    image: assets/Light.jpeg
+    image_dark: assets/Dark.jpeg
+
