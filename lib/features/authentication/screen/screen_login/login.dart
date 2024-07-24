@@ -34,6 +34,7 @@ class _loginScreenState extends State<loginScreen> {
                 //Divider
                 TFormDivider(
                   formDividerText: TText.orSignInwith,
+                  ht: 50,
                 ),
                 SizedBox(height: TSize.spaceBtSections),
                 //Footer

@@ -1,4 +1,5 @@
 import 'package:ecomorce/features/authentication/screen/screen_onboarding/onboarding.dart';
+import 'package:ecomorce/features/authentication/screen/screen_signup/signup.dart';
 import 'package:ecomorce/features/shop/view/homescreen.dart';
 import 'package:ecomorce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
-      theme:TAppTheme.lightTheme,
-      darkTheme:TAppTheme.darkTheme,
+      theme: TAppTheme.lightTheme,
+      darkTheme: TAppTheme.darkTheme,
       home: OnBoardingScreen(),
     );
   }

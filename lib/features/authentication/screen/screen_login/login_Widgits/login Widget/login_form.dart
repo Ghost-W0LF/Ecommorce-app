@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecomorce/common/Widgets/custom_textFormField.dart';
+import 'package:ecomorce/features/authentication/model/login_controller.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/constants/sizes.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
@@ -17,25 +19,19 @@ class form extends StatelessWidget {
     return Form(
         child: Column(
       children: [
-        TextFormField(
-          decoration: InputDecoration(
-            prefixIcon: Icon(Icons.arrow_right),
-            labelText: TText.email,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
+        customTextFormField(
+          obsText: false,
+          labelText: TText.email,
+          PIcn: Icon(Icons.arrow_right_outlined),
+          hintText: "Your email@gmail.com",
         ),
         SizedBox(height: TSize.spaceBtSections),
-        TextFormField(
-          obscureText: true,
-          decoration: InputDecoration(
-            suffixIcon: Icon(Icons.remove_red_eye),
-            labelText: TText.password,
-            hintMaxLines: 4,
-            hintText: "Your password",
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-          ),
+        customTextFormField(
+          obsText: true,
+          labelText: TText.password,
+          hintText: "Password",
+          //PIcn: Icon(Icons.wifi_password),
+          SIcn: Icon(Icons.remove_red_eye),
         ),
         SizedBox(height: TSize.spaceBtSections),
         //Remember me forget password
@@ -75,7 +71,7 @@ class form extends StatelessWidget {
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 55)),
-            onPressed: () {},
+            onPressed: () => LoginController.instance.createAccount(),
             child: Text(
               TText.createAccount,
               style: Theme.of(context).textTheme.bodyMedium,
