@@ -23,7 +23,7 @@ class customTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: PIcn,
         suffixIcon: SIcn,
-        labelText: '${labelText}',
+        labelText: labelText,
         hintMaxLines: 4,
         hintText: hintText,
         border: OutlineInputBorder(
