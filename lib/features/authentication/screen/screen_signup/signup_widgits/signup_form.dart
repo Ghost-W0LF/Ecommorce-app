@@ -1,8 +1,11 @@
+import 'package:ecomorce/common/Widgets/custom_button2.dart';
 import 'package:ecomorce/common/Widgets/custom_textFormField.dart';
+import 'package:ecomorce/features/authentication/screen/verify%20email%20Screen/verify_email.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/constants/sizes.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class signup_form extends StatelessWidget {
   const signup_form({
@@ -94,15 +97,10 @@ class signup_form extends StatelessWidget {
             ],
           ),
           SizedBox(height: TSize.spaceBtwitems),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 55)),
-              onPressed: () {},
-              child: Text(
-                TText.createAccount,
-                style: Theme.of(context).textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              )),
+          custom_outlinebutton(
+            label: TText.createAccount,
+            onPressed: () => Get.offAll(() => VerifyEmail()),
+          )
         ],
       ),
     );

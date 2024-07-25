@@ -1,5 +1,4 @@
 import 'package:ecomorce/features/authentication/screen/screen_login/login.dart';
-import 'package:ecomorce/features/authentication/screen/screen_signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +23,7 @@ class OnBoardingController {
   //update current index and jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      Get.offAll(Signup());
+      Get.offAll(const loginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

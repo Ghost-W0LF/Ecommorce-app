@@ -11,4 +11,9 @@ class TImage {
   static const String logo = "assets/images/logo/logo.png";
   static const String facebook = "assets/images/logo/Facebook.png";
   static const String google = "assets/images/logo/Google.png";
+
+  //verification
+  static const String animation1 =
+      "assets/animations/ verification animation1.gif";
+  static const String verifiedEmail = "assets/animations/Verified.gif";
 }

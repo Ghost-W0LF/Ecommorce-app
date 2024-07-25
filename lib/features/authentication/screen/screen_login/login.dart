@@ -2,7 +2,7 @@
 import 'package:ecomorce/common/login_Signup/formDivider.dart';
 import 'package:ecomorce/common/login_Signup/social_buttons.dart';
 import 'package:ecomorce/features/authentication/screen/screen_login/login_Widgits/login%20Widget/login_form.dart';
-import 'package:ecomorce/features/authentication/screen/screen_login/login_Widgits/login_headder.dart';
+import 'package:ecomorce/features/authentication/screen/screen_login/login_Widgits/login%20Widget/login_headder.dart';
 import 'package:ecomorce/utils/constants/sizes.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';

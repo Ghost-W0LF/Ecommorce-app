@@ -1,21 +1,22 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecomorce/common/Widgets/custom_button2.dart';
 import 'package:ecomorce/common/Widgets/custom_textFormField.dart';
-import 'package:ecomorce/features/authentication/model/login_controller.dart';
-import 'package:ecomorce/utils/constants/colors.dart';
+import 'package:ecomorce/common/Widgets/custom_button.dart';
+import 'package:ecomorce/features/authentication/screen/screen_signup/signup.dart';
 import 'package:ecomorce/utils/constants/sizes.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
-import 'package:ecomorce/utils/helpers/helper_function.dart';
+
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class form extends StatelessWidget {
-  const form({
+  form({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final bool dark = THelperFunction.isDarkMode(context);
     return Form(
         child: Column(
       children: [
@@ -56,27 +57,21 @@ class form extends StatelessWidget {
         ),
         //SignIN button
         SizedBox(height: TSize.spaceBtSections),
-        ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: dark ? Tcolors.primary : Tcolors.accent,
-                minimumSize: Size(double.infinity, 55)),
-            onPressed: () {},
-            child: Text(
-              TText.signin,
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
-            )),
-        SizedBox(height: TSize.spaceBtSections),
+        custom_eleveted(
+          label: TText.signin,
+          onPressed: () {
+            print("Signin");
+          },
+        ),
 
-        ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                minimumSize: Size(double.infinity, 55)),
-            onPressed: () => LoginController.instance.createAccount(),
-            child: Text(
-              TText.createAccount,
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
-            )),
+        SizedBox(height: TSize.spaceBtSections),
+        custom_outlinebutton(
+          label: TText.createAccount,
+          onPressed: () {
+            Get.to(() => Signup());
+          },
+        ),
+
         SizedBox(height: TSize.spaceBtSections),
       ],
     ));

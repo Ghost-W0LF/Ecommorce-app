@@ -1,9 +1,7 @@
 import 'package:ecomorce/features/authentication/screen/screen_onboarding/onboarding.dart';
-import 'package:ecomorce/features/authentication/screen/screen_signup/signup.dart';
-import 'package:ecomorce/features/shop/view/homescreen.dart';
+
 import 'package:ecomorce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 // ignore_for_file: prefer_const_constructors
 
