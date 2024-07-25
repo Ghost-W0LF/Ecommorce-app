@@ -30,6 +30,8 @@ flutter:
     - assets/images/logo/logo.png
     - assets/images/logo/Google.png
     - assets/images/logo/Facebook.png
+    - assets/animations/
+
 
 flutter_native_splash:
   color: "#42a5f5"
