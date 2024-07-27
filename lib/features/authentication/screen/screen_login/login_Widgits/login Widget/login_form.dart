@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecomorce/navigation_bar.dart';
 import 'package:ecomorce/common/Widgets/custom_button2.dart';
 import 'package:ecomorce/common/Widgets/custom_textFormField.dart';
 import 'package:ecomorce/common/Widgets/custom_button.dart';
@@ -60,7 +61,7 @@ class form extends StatelessWidget {
         custom_eleveted(
           label: TText.signin,
           onPressed: () {
-            print("Signin");
+            Get.to(() => navigationBar());
           },
         ),
 

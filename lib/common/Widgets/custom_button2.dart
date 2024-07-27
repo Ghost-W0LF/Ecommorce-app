@@ -4,6 +4,7 @@ import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class custom_outlinebutton extends StatelessWidget {
   custom_outlinebutton({
     super.key,
@@ -18,7 +19,9 @@ class custom_outlinebutton extends StatelessWidget {
     bool dark = THelperFunction.isDarkMode(context);
     return OutlinedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: dark ? Tcolors.accent : Tcolors.darkGrey,
+            backgroundColor: dark
+                ? const Color.fromARGB(255, 0, 0, 0).withOpacity(0)
+                : Tcolors.darkGrey,
             minimumSize: Size(double.infinity, 55)),
         onPressed: onPressed,
         child: Text(

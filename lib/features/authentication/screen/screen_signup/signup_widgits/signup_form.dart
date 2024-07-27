@@ -98,6 +98,7 @@ class signup_form extends StatelessWidget {
           ),
           SizedBox(height: TSize.spaceBtwitems),
           custom_outlinebutton(
+            
             label: TText.createAccount,
             onPressed: () => Get.offAll(() => VerifyEmail()),
           )
