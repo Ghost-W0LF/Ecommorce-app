@@ -16,4 +16,13 @@ class TImage {
   static const String animation1 =
       "assets/animations/ verification animation1.gif";
   static const String verifiedEmail = "assets/animations/Verified.gif";
+
+  //Banner
+  static const String banner1 = "assets/images/banner 1.jpeg";
+
+  static const String banner2 = "assets/images/banner2.jpeg";
+  static const String banner3 = "assets/images/banner 3.jpeg";
+
+  //product Image
+  static const String shoes1 = "assets/images/shoes.png";
 }

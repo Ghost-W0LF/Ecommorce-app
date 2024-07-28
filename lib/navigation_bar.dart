@@ -2,7 +2,6 @@
 
 import 'package:ecomorce/common/sucess_Screen.dart';
 import 'package:ecomorce/features/authentication/screen/screen_login/login.dart';
-import 'package:ecomorce/features/authentication/screen/screen_signup/signup.dart';
 import 'package:ecomorce/features/authentication/screen/verify%20email%20Screen/verify_email.dart';
 import 'package:ecomorce/features/shop/screen/home/home.dart';
 import 'package:ecomorce/utils/constants/colors.dart';

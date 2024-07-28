@@ -14,7 +14,8 @@ dependencies:
   flutter_native_splash: ^2.4.0
   smooth_page_indicator: ^1.2.0+3
   get: ^4.6.6
-
+  carousel_slider: ^4.2.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -27,10 +28,9 @@ flutter:
     - assets/images/onBoarding/Light_onboarding.gif
     - assets/images/onBoarding/onboarding 2.gif
     - assets/images/onBoarding/onboarding 3.gif
-    - assets/images/logo/logo.png
-    - assets/images/logo/Google.png
-    - assets/images/logo/Facebook.png
-    - assets/animations/
+   
+    - assets/images/logo/
+    - assets/images/
 
 
 flutter_native_splash:
