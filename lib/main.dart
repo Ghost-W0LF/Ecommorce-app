@@ -1,12 +1,19 @@
 import 'package:ecomorce/features/authentication/screen/screen_onboarding/onboarding.dart';
+import 'package:ecomorce/features/shop/model/products.dart';
 
 import 'package:ecomorce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:provider/provider.dart';
 // ignore_for_file: prefer_const_constructors
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => ProductProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

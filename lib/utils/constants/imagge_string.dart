@@ -24,5 +24,9 @@ class TImage {
   static const String banner3 = "assets/images/banner 3.jpeg";
 
   //product Image
-  static const String shoes1 = "assets/images/shoes.png";
+  static const String shoes1 = "assets/images/Products/shoes.png";
+    static const String airpod = "assets/images/Products/Airpod.png";
+      static const String chair = "assets/images/Products/Chair.png";
+        static const String crossBow = "assets/images/Products/CrossBow.png";
+          static const String bike = "assets/images/Products/MoterBike.png";
 }

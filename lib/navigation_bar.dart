@@ -3,11 +3,14 @@
 import 'package:ecomorce/common/sucess_Screen.dart';
 import 'package:ecomorce/features/authentication/screen/screen_login/login.dart';
 import 'package:ecomorce/features/authentication/screen/verify%20email%20Screen/verify_email.dart';
+import 'package:ecomorce/features/shop/model/products.dart';
+import 'package:ecomorce/features/shop/screen/favourites/favourite_screen.dart';
 import 'package:ecomorce/features/shop/screen/home/home.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/constants/sizes.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class navigationBar extends StatefulWidget {
   navigationBar({super.key});
@@ -17,12 +20,13 @@ class navigationBar extends StatefulWidget {
 }
 
 class _navigationBarState extends State<navigationBar> {
-  @override
   int page = 0;
-  final screen = [homePage(), loginScreen(), VerifyEmail(), sucessScreen()];
 
+  final screen = [homePage(), VerifyEmail(), FavouriteScreen(), sucessScreen()];
+  @override
   // default selected index
   Widget build(BuildContext context) {
+    var favourits = context.watch<ProductProvider>().favourites;
     bool dark = THelperFunction.isDarkMode(context);
     return Scaffold(
       body: screen[page],
@@ -33,7 +37,7 @@ class _navigationBarState extends State<navigationBar> {
         selectedIndex: page,
         onDestinationSelected: (index) {
           setState(() {
-            this.page = index;
+            page = index;
           });
         },
         destinations: [
@@ -47,7 +51,7 @@ class _navigationBarState extends State<navigationBar> {
           ),
           NavigationDestination(
             icon: Icon(Icons.favorite_outline),
-            label: "Wishlist",
+            label: "WishList (${favourits.length})",
           ),
           NavigationDestination(
             icon: Icon(Icons.person_2_outlined),
