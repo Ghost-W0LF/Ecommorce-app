@@ -16,7 +16,7 @@ dependencies:
   get: ^4.6.6
   carousel_slider: ^4.2.1
   provider: ^6.1.2
-  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -34,17 +34,18 @@ flutter:
     - assets/images/onBoarding/Light_onboarding.gif
     - assets/images/onBoarding/onboarding 2.gif
     - assets/images/onBoarding/onboarding 3.gif
-   
     - assets/images/logo/
-    
 
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
 
 flutter_native_splash:
   color: "#42a5f5"
   image: assets/Light.jpeg
-  image_dark: assets/Dark.jpeg 
+  image_dark: assets/Dark.jpeg
   android_12:
     color: "#42a5f5"
     image: assets/Light.jpeg
     image_dark: assets/Dark.jpeg
-

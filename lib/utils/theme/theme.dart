@@ -10,13 +10,13 @@ class TAppTheme {
     primaryColor: Tcolors.darkGrey,
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTextTheme,
+    fontFamily: 'Roboto',
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: const Color.fromARGB(255, 32, 32, 32),
     primaryColor: Tcolors.LightGrey,
     brightness: Brightness.dark,
     textTheme: TTextTheme.darkTextTheme,
-    
   );
 }
