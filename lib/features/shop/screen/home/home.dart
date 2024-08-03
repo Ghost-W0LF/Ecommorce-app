@@ -64,8 +64,7 @@ class _homePageState extends State<homePage> {
                           rds: 400,
                         ),
                       ),
-                      //Headder
-                      homeHeadder(),
+
                       //decoration2
                       Positioned(
                         right: -280,
@@ -77,6 +76,8 @@ class _homePageState extends State<homePage> {
                           rds: 400,
                         ),
                       ),
+                      //Headder
+                      homeHeadder(),
                     ],
                   ),
                 ),

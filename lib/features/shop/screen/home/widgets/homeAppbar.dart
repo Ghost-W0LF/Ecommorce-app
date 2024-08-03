@@ -1,9 +1,11 @@
 import 'package:ecomorce/common/Widgets/custom_Appbar.dart';
 import 'package:ecomorce/common/Widgets/custom_container.dart';
+import 'package:ecomorce/features/shop/screen/cart/cart_Screen.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class homeAppbar extends StatelessWidget {
   const homeAppbar({
@@ -16,21 +18,30 @@ class homeAppbar extends StatelessWidget {
     return CustomAppbar(
       havebackarrow: false,
       actionIcon: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           custom_container(
             height: 20,
             width: 20,
-            rds: 900,
+            rds: 10,
             color: Tcolors.black,
             child: Text(
-              "2",
+              "3",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: dark ? Tcolors.primaryBackground : Tcolors.white),
             ),
           ),
-          Icon(Icons.shopping_bag,
-              color: dark ? Tcolors.primaryBackground : Tcolors.white),
+          IconButton(
+            onPressed: () {
+              Get.to(const CartScreen());
+            },
+            icon: Icon(
+              Icons.shopping_cart_checkout,
+              color: dark ? Tcolors.primaryBackground : Tcolors.white,
+              size: 25,
+            ),
+          )
         ],
       ),
       title: Column(

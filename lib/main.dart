@@ -1,4 +1,5 @@
 import 'package:ecomorce/features/authentication/screen/screen_onboarding/onboarding.dart';
+import 'package:ecomorce/features/shop/model/cart_model.dart';
 import 'package:ecomorce/features/shop/model/products.dart';
 
 import 'package:ecomorce/utils/theme/theme.dart';
@@ -11,6 +12,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => ProductProvider()),
+      ChangeNotifierProvider(create: (context) => CartProvider()),
     ],
     child: const MyApp(),
   ));

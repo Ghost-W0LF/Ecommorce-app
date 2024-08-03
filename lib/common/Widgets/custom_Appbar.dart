@@ -21,8 +21,9 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      toolbarHeight: 70,
       automaticallyImplyLeading: false,
-      backgroundColor: Tcolors.primary,
+      backgroundColor: Tcolors.primary.withOpacity(0.2),
       leading: havebackarrow
           ? IconButton(
               onPressed: () {
