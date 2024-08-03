@@ -2,10 +2,10 @@ import 'package:ecomorce/utils/constants/imagge_string.dart';
 import 'package:flutter/material.dart';
 
 class Products {
-  Products({this.image, this.label, this.price, this.subtitle});
+  Products({this.image, this.label,required this.price, this.subtitle});
   final String? label;
   final String? image;
-  final int? price;
+  final int price;
   final String? subtitle;
 }
 
@@ -16,11 +16,34 @@ class ProductProvider extends ChangeNotifier {
         label: "CrossBow", image: TImage.crossBow, price: 4000, subtitle: ""),
     Products(label: "Bike", image: TImage.bike, price: 4500, subtitle: ""),
     Products(label: "Airpod", image: TImage.airpod, price: 1000, subtitle: ""),
-    Products(label: "Chair", image: TImage.chair, price: 500, subtitle: ""),
+    Products(
+        label: "Apple Watch", image: TImage.watch, price: 60000, subtitle: ""),
+    Products(
+        label: "Gramophone",
+        image: TImage.gramophone,
+        price: 48000,
+        subtitle: ""),
+    Products(
+        label: "Beige Men Sweater",
+        image: TImage.sweater,
+        price: 1800,
+        subtitle: ""),
+    Products(
+        label: "Apple MacBook pro",
+        image: TImage.macbook,
+        price: 500,
+        subtitle: ""),
+    Products(
+        label: "Iphone 13", image: TImage.iphone, price: 190000, subtitle: ""),
+    Products(
+        label: "Nicon D5500",
+        image: TImage.camera,
+        price: 130000,
+        subtitle: ""),
   ];
 
   List<dynamic> favourites = [];
-  List<dynamic> Cart = [];
+  List<int> Cart = [];
 
   void addToFavrouite(index) {
     favourites.add(index);
@@ -31,6 +54,8 @@ class ProductProvider extends ChangeNotifier {
     favourites.remove(index);
     notifyListeners();
   }
+  
+
 
   @override
   void notifyListeners() {

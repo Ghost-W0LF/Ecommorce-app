@@ -1,5 +1,6 @@
 import 'package:ecomorce/common/layout/gridLayout.dart';
 import 'package:ecomorce/common/verticalProductCard.dart';
+import 'package:ecomorce/features/shop/model/cart_model.dart';
 import 'package:ecomorce/features/shop/model/products.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,7 @@ class FavouriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var favourite = context.watch<ProductProvider>().favourites;
+    var cart = context.watch<CartProvider>().cart;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Favourite'),
@@ -19,7 +21,8 @@ class FavouriteScreen extends StatelessWidget {
           builder: (context, ins, child) {
             return gridLayout(
                 itemCount: favourite.length,
-                itemBuilder: (_, index) => VerticalProductCard(
+                itemBuilder: (BuildContext context, index) =>
+                    VerticalProductCard(
                       showFavourite: false,
                       ind: index,
                       image:

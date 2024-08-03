@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:ecomorce/common/Widgets/rounded%20Image/roundedImage.dart';
+import 'package:ecomorce/features/shop/model/cart_model.dart';
 import 'package:ecomorce/features/shop/model/products.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 
@@ -35,6 +36,7 @@ class _VerticalProductCardState extends State<VerticalProductCard> {
   @override
   Widget build(BuildContext context) {
     var favourites = context.watch<ProductProvider>().favourites;
+    var cart = context.watch<CartProvider>().cart;
     bool dark = THelperFunction.isDarkMode(context);
     return Consumer<ProductProvider>(
       builder: (BuildContext context, ins, child) {
@@ -105,18 +107,31 @@ class _VerticalProductCardState extends State<VerticalProductCard> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-                        "RS ${widget.price}",
+                        "रु ${widget.price}",
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       SizedBox(width: 5),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Tcolors.darkGrey),
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
+                      GestureDetector(
+                        onTap: () {
+                          if (cart.contains(widget.ind)) {
+                            context.read<CartProvider>().removeCart(widget.ind);
+                          } else {
+                            context.read<CartProvider>().addtoCart(widget.ind);
+                          }
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Tcolors.darkGrey),
+                            child: cart.contains(widget.ind)
+                                ? Icon(
+                                    Icons.remove,
+                                    color: Colors.white,
+                                  )
+                                : Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  )),
                       )
                     ],
                   )

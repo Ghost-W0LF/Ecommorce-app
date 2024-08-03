@@ -1,11 +1,13 @@
 import 'package:ecomorce/common/Widgets/custom_Appbar.dart';
 import 'package:ecomorce/common/Widgets/custom_container.dart';
+import 'package:ecomorce/features/shop/model/cart_model.dart';
 import 'package:ecomorce/features/shop/screen/cart/cart_Screen.dart';
 import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/constants/text_String.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:provider/provider.dart';
 
 class homeAppbar extends StatelessWidget {
   const homeAppbar({
@@ -14,6 +16,7 @@ class homeAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cart = context.watch<CartProvider>().cart;
     bool dark = THelperFunction.isDarkMode(context);
     return CustomAppbar(
       havebackarrow: false,
@@ -26,7 +29,7 @@ class homeAppbar extends StatelessWidget {
             rds: 10,
             color: Tcolors.black,
             child: Text(
-              "3",
+              "${cart.length}",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: dark ? Tcolors.primaryBackground : Tcolors.white),

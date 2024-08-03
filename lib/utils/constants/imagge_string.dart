@@ -25,8 +25,14 @@ class TImage {
 
   //product Image
   static const String shoes1 = "assets/images/Products/shoes.png";
-    static const String airpod = "assets/images/Products/Airpod.png";
-      static const String chair = "assets/images/Products/Chair.png";
-        static const String crossBow = "assets/images/Products/CrossBow.png";
-          static const String bike = "assets/images/Products/MoterBike.png";
+  static const String airpod = "assets/images/Products/Airpod.png";
+  static const String chair = "assets/images/Products/Chair.png";
+  static const String crossBow = "assets/images/Products/CrossBow.png";
+  static const String watch = "assets/images/Products/Apple Watch.png";
+  static const String gramophone = "assets/images/Products/Gramophone.png";
+  static const String sweater = "assets/images/Products/Beige Men Sweater.png";
+  static const String macbook = "assets/images/Products/Apple MacBook.png";
+  static const String bike = "assets/images/Products/MoterBike.png";
+  static const String camera = "assets/images/Products/Nicon D5500.png";
+  static const String iphone = "assets/images/Products/Iphone 13.png";
 }
