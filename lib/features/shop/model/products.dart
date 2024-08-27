@@ -2,7 +2,7 @@ import 'package:ecomorce/utils/constants/imagge_string.dart';
 import 'package:flutter/material.dart';
 
 class Products {
-  Products({this.image, this.label,required this.price, this.subtitle});
+  Products({this.image, this.label, required this.price, this.subtitle});
   final String? label;
   final String? image;
   final int price;
@@ -11,7 +11,11 @@ class Products {
 
 class ProductProvider extends ChangeNotifier {
   List<Products> productsItmes = [
- 
+    Products(label: "Shose", image: TImage.shoes1, price: 3000, subtitle: ""),
+    Products(
+        label: "CrossBow", image: TImage.crossBow, price: 4000, subtitle: ""),
+    Products(label: "Bike", image: TImage.bike, price: 4500, subtitle: ""),
+    Products(label: "Airpod", image: TImage.airpod, price: 1000, subtitle: ""),
     Products(
         label: "Apple Watch", image: TImage.watch, price: 60000, subtitle: ""),
     Products(
@@ -50,8 +54,6 @@ class ProductProvider extends ChangeNotifier {
     favourites.remove(index);
     notifyListeners();
   }
-  
-
 
   @override
   void notifyListeners() {
