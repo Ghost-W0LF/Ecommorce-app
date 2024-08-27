@@ -12,6 +12,7 @@ import 'package:ecomorce/utils/constants/colors.dart';
 import 'package:ecomorce/utils/device/device_utility.dart';
 import 'package:ecomorce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class homePage extends StatefulWidget {
@@ -84,6 +85,7 @@ class _homePageState extends State<homePage> {
                   height: 20,
                 ),
                 sectionTitel(label: "Popular Products"),
+   
 
                 gridLayout(
                     itemCount: ins.productsItmes.length,
